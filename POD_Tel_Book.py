@@ -3,6 +3,7 @@ import pickle
 # 1. Leader Numbers
 leader = {}
 leader["Jacore:"] = "(845) 200-6250"
+leader["Andrew:"] = "(925) 727-4611"
 leader["Gabriel:"] = "(510) 613-6288"
 leader["Aris:"] = "(510) 229-6359"
 leader["Richard:"] = "(510) 228-5623"
@@ -15,6 +16,7 @@ pickle.dump(leader,pod_file)
 
 # 4. Member Numbers
 member = {}
+member["Andrew:"] = "(925) 727-4611"
 member["Glenn:"] = "(510) 328-8290"
 member["Mallick:"] = "(510) 409-8755"
 member["Ronin:"] = "(415) 910-3415"
