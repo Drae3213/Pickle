@@ -1,3 +1,13 @@
+'''
+***********************************************
+*  Program: POD_Tel_Book.py                   *
+* Author: Andrew Lubega                       *
+* Date: 1/28/2021                             *
+* The Hidden Genius Project                   *
+* Cohort: OAK8(THE BEST ONE!!!!!!!!!)         *
+***********************************************
+'''
+
 import pickle
 
 # 1. Leader Numbers
