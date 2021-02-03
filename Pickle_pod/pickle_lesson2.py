@@ -1,6 +1,6 @@
 '''
 ***********************************************
-*  Program: pickle_lesson2.py                 *
+*  Program: pickle.lesson2_staff.py                 *
 * Author: Andrew Lubega                       *
 * Date: 1/28/2021                             *
 * The Hidden Genius Project                   *
@@ -8,14 +8,15 @@
 ***********************************************
 '''
 
-import pickle
+
 
 #1 Initialize an empty dictionary variable, name it all_pod_members
-all_pod_members = {}
+pod_leaders = {}
+instructor_pod = {}
 
 #2 Initialize a file variable to write data to, name it pod_file, that will
 # open a file named hgp_pods that you will write data to the file. 
-pod_file = open('all_pods.pkl', 'wb')
+
 
 #3  Initialize empty dictionary variables, name it as such;
 jacore_members = {}
@@ -26,7 +27,8 @@ richard_members = {}
 
 #4 Create an empty dictionary for the other 3 PODs; Aris, Gabriel and Richard
 
-#5 Add the names and telephone numbers of each member POD  
+#5 Add the names and telephone numbers of each member POD
+
 jacore_members['Jacore Baptiste'] = '(845) 200-6250'
 jacore_members['Moussa Ndiaye'] = '(123) 456-7890'
 jacore_members['Morris Jones'] = '(925) 286-5922'
@@ -53,33 +55,34 @@ richard_members["Richard Kamau"] = "(510) 228-5623 "
 richard_members["Mathew Dudley"] = "(510) 816-2411 "
 richard_members["Kymari Rhodes"] = "(510) 816-2411 "
 
-
- 
 #6 Add all the PODS to the all_pod_members dictionary
-all_pod_members['Jacore'] = jacore_members
-all_pod_members['Andrew'] = andrew_members
-all_pod_members['Gabriel'] = gabriel_members
-all_pod_members['Aris'] = aris_members
-all_pod_members['Richard'] = richard_members
+
+pod_leaders['Jacore'] =  jacore_members
+pod_leaders['Andrew'] = andrew_members
+pod_leaders['Gabriel'] = gabriel_members
+pod_leaders['Aris'] = aris_members
+pod_leaders['Richard'] = richard_members
+
+instructor_pod["Akeem"] = pod_leaders["Jacore"]
+instructor_pod["Baba"] =  pod_leaders["Andrew"]
+instructor_pod["Hodari"] =  pod_leaders["Gabriel"]
+instructor_pod["David"] =  pod_leaders["Aris"]
+instructor_pod["Paris"] =  pod_leaders["Richard"]
 
 #7 Dump all the 
-pickle.dump(jacore_members,pod_file)
-pickle.dump(andrew_members,pod_file)
-pickle.dump(gabriel_members,pod_file)
-pickle.dump(aris_members,pod_file)
-pickle.dump(richard_members,pod_file)
-
 
 #8 Open the pod_file to read data
-pod_file = open('all_pods.pkl', 'rb')
-print(all_pod_members, "\n")
+
 
 #9 Print all the Pod leaders and POD membership
-for key,value in all_pod_members.items():
-  print('This POD Leader is',key)
-  for key2, value2 in value.items():
-    print(key2,value2)
-  print('\n')
+for instructor_pod, pod_leaders in instructor_pod.items():
+  print("This PODs Instructor is ", instructor_pod)
+  print("This POD Leader is",str(list(pod_leaders.keys())[0]))
+  for pod_leaders, pod_members in pod_leaders.items():
+    print( pod_leaders, pod_members)
+  print("\n")
+      
+  
 
-pod_file.close()
+
 
