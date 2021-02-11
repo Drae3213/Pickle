@@ -1,6 +1,6 @@
 '''
 ***********************************************
-*  Program: POD_Tel_Book.py                   *
+*  Program: telephone book            *
 * Author: Andrew Lubega                       *
 * Date: 1/28/2021                             *
 * The Hidden Genius Project                   *

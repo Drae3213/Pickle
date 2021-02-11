@@ -76,8 +76,8 @@ instructor_pod["Paris"] =  pod_leaders["Richard"]
 
 #9 Print all the Pod leaders and POD membership
 for instructor_pod, pod_leaders in instructor_pod.items():
-  print("This PODs Instructor is ", instructor_pod)
-  print("This POD Leader is",str(list(pod_leaders.keys())[0]))
+  print("POD Instructor: ", instructor_pod)
+  print("POD Leader",str(list(pod_leaders.keys())[0]))
   for pod_leaders, pod_members in pod_leaders.items():
     print( pod_leaders, pod_members)
   print("\n")

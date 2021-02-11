@@ -1,0 +1,103 @@
+'''
+#######################################
+#                                                 #
+#  Program: tel Book                  #
+#  Author:Jacore Baptise      #
+#  Date    2/5/2021                  #
+#  The Hidden Genius Project   #
+#  OAK8 Cohort                         #
+#                                                 #
+#######################################
+'''
+# Initialize Instructor Dictionary
+instructor = {}
+
+# Initialize Pod Leader Dictionary
+jacore_leader = {}
+
+# Initialize POD Members Dictionary
+jacore_member = {}
+
+# Add Members to member POD
+jacore_member['Jacore Baptiste'] = '(845) 200-6250'
+jacore_member['Moussa Ndiaye'] = '(123) 456-7890'
+jacore_member['Morris Jones'] = '(925) 286-5922'
+jacore_member['Prince Fields'] = '(510) 472-0804'
+jacore_member['Akari Johnson'] = '(510) 500-2206'
+
+# Add member POD to POD leader's Dictionary
+jacore_leader['Jacore'] = jacore_member
+
+# Add Member POD to Instructor's Dictionary
+instructor['Baba'] = jacore_leader
+
+
+andrew_leader = {}
+andrew_member = {}
+andrew_member['Andrew Lubega'] = '(925) 727-4611'
+andrew_member['Mallick Abdullah'] = '(510) 409-8755' 
+andrew_member['Ronin Youngjones'] = '(415) 910-3415'
+andrew_member['Glenn Ivory'] = '(510) 328-8290'
+andrew_leader['Andrew'] = andrew_member
+instructor["Hodari"] = andrew_leader
+
+richard_leader = {}
+richard_member = {}
+richard_member['Richard Kamu'] = '000-000-0000'
+richard_member['Matthew Dudley'] = '000-000-0000'
+richard_member['Kymari Rhodes'] = '000-000-0000'
+richard_member['Josiah Johnson'] = '000-000-0000'
+richard_leader['Richard'] = richard_member
+
+instructor["Akeem"] = richard_leader
+
+gaberiel_leader = {}
+gaberiel_member = {}
+gaberiel_member['Gaberiel Reader'] = '000-000-0000'
+gaberiel_member['Emmanuel Tobor'] = '000-000-0000'
+gaberiel_member['David Brickly'] = '000-000-0000'
+gaberiel_member['Myles Wilkerson'] = '000-000-0000'
+gaberiel_leader['Gaberiel'] = gaberiel_member
+
+instructor["Paris"] = gaberiel_leader
+
+aris_leader = {}
+aris_member = {}
+aris_member['Aris Carter'] = '000-000-0000'
+aris_member['Maurice Richardson'] = '000-000-0000'
+aris_member['Zyion Williams'] = '000-000-0000'
+aris_member['Hyab Isayas'] = '000-000-0000'
+aris_member['Milan Kral'] = '000-000-0000'
+aris_leader['Aris'] = aris_member
+
+instructor["David"] = aris_leader
+
+'''
+###################################################
+# For Loop Algorithm to print instructor,         #
+# POD Leader, POD members, telephonen numbers     #
+#                                                 #
+# For every instructor                            #
+#   print the instructor's name                   #
+#                                                 #
+#   For every pod leader                          #
+#     print the pod leader's name                 #
+#                                                 #
+#     For every pod member                        #
+#       print the pod member's name and number    #
+###################################################
+'''
+
+for instructor, pod_leader in instructor.items():
+    print("Instructor:", instructor)
+    
+    for pod_leader, pod_member in pod_leader.items():
+        print("POD Leader:", pod_leader)
+        
+        for pod_member, phone_number in pod_member.items():           
+            print(pod_member, phone_number);
+    print("\n")
+
+
+
+
